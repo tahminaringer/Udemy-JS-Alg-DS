@@ -17,3 +17,8 @@ Who this course is for:
 Anyone preparing for programming interviews
 Anyone interested in improving their problem solving skills
 Anyone looking to become a better developer!
+
+## Notes/Resources
+
+- [Course Link](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/8344084#overview)
+- [Notes](notes.md)
