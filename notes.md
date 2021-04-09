@@ -70,7 +70,20 @@
 
 - **Problem Solving**
 - Understand the problem
+  - Questions to ask
+    1. can you restate the problem in your own words?
+    2. What are the inputs
+    3. What are the outputs
+    4. Can the outputs be determined from the inputs? Do you have enough information to solve the problem
+    5. How should I label the important pieces of data that are a part of the problem?
 - explore concrete examples
+  - come up with concrete examples to understand the problem better
+  - Examples also provide sanity checks to prove solution works how it should
+  - User Stories, Unit Tests
+    - start with simple examples
+    - progress to more complex examples
+    - explore examples with empty inputs
+    - explore examples with invalid inputs
 - Break it down
 - Solve/Simplify
 - Look back and refactor
