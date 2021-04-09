@@ -22,3 +22,4 @@ Anyone looking to become a better developer!
 
 - [Course Link](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/8344084#overview)
 - [Notes](notes.md)
+- [Book to Read](https://www.amazon.com/How-Solve-Mathematical-Princeton-Science/dp/069111966X#:~:text=Polya%2C%20How%20to%20Solve%20It,winning%20a%20game%20of%20anagrams.)
