@@ -56,3 +56,21 @@
     - splice O(n)
     - sort O(n * log n)
     - forEach/map/filter/reduce/etc. O(n)
+
+## Section 4
+
+**Algorithm** process or set of steps to accomplish a certain task
+
+- everything in programing involeves some kind of algorithm
+- foundation for being a successful dev
+
+- **How to improve your algorithm process**
+  1. Devise a plan for solving problems
+  2. Master common problem solving patterns
+
+- **Problem Solving**
+- Understand the problem
+- explore concrete examples
+- Break it down
+- Solve/Simplify
+- Look back and refactor
