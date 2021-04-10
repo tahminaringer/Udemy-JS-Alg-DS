@@ -85,5 +85,20 @@
     - explore examples with empty inputs
     - explore examples with invalid inputs
 - Break it down
+  - algorithm - steps I would take to solve
+  - gets you to think about the code before your write it
+  - helps highlight problems you might not be comfortable with solving
 - Solve/Simplify
+  - Solve if you can, if you can't solve a simpler problem
+  - Find the core difficulty in what you are trying to do
+  - Temporarily ignore that difficulty
+  - Write a simplified solution
+  - Then incorporate that difficulty back in
 - Look back and refactor
+  - Can you check the result?
+  - Can you derive the result differently?
+  - Can you understand it at a glance?
+  - Can you use the result or method for some other problem?
+  - Can you improve the performance of your solution?
+  - Can you think of other ways to refactor?
+  - How have other people solved this problem?
