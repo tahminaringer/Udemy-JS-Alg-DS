@@ -125,7 +125,7 @@ function same(arr1, arr2) {
   for(let val of arr1) {
     frequencyCounter1[val] = (frequencyCounter1[val] || 0) +1;
   }
-  for(let val of arr) {
+  for(let val of arr2) {
     frequencyCounter2[val] = (frequencyCounter2[val] || 0) +1;
   }
   // loop over counter1 to see if exists in counter2
@@ -143,5 +143,87 @@ function same(arr1, arr2) {
   return true;
 }
 
+//ANAGRAMS 
+// Given 2 strings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.
 
+// validAnagram('', '') true
+// validAnagram('aaz', 'zza') false
+// validAnagram('anagram', 'nagaram') true
+// validAnagram('rat', 'car') false
+// validAnagram('awesome', 'awesom') false
+// validAnagram('qwerty', 'qeywrt') true
+// validAnagram('texttwisttime', 'timetwisttext') true
 
+function validAnagram(sting1, string2){
+  if(sting1.length !== string2.length) {
+      return false;
+  }
+
+  let lookup = {};
+
+  for(let i = 0; i < sting1.length; i++) {
+    let letter = sting1[i];
+    lookup[letter] ? lookup[letter] += 1 : lookup[letter] = 1;
+  }
+  for(let i = 0; i < string2.lenght; i++) {
+    let letter = string2[i];
+    if(!lookup[letter]) {
+      return false;
+    } else {
+      lookup[letter] -= 1;
+    }
+  }
+  return true;
+}
+
+//Pointers -
+// Write a function called sumZero which accepts a sorted array of integers. the function should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist.
+
+//sumZero([-3, -2, -1, 0, 1, 2, 3]) // [-3, 3]
+//sumZero([-2, 0, 1, 3])// undefined
+//sumZero([1, 2, 3]) // undefined
+
+//easy but not time sensitive O(n^2)
+function sumZero(array) {
+  for(let i =0; i < array.lenghth; i ++) {
+    for(let j = 0; j < array.length; j++) {
+      if (array[i] + array[j] === 0){
+        return [array[i], array[j]];
+      }
+    }
+  }
+}
+
+//refactored Time O(n) Space O(1)
+
+function sumZero(arr) {
+  let left = 0;
+  let right = arr.lenght -1;
+  while(left < right) {
+    let sum = arr[left] + arr[right];
+    if(sum === 0) {
+      return [arr[left], arr[right]];
+    } else if (sum > 0) {
+      right --;
+    } else {
+      left ++;
+    }
+  }
+}
+
+// count unique values
+// implement a function called countUniqueValues, which accepts a sorted array and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
+
+function countUniqueValues(arr) {
+  if(arr.length === 0) {
+    return 0;
+  }
+  var i = 0
+  for (var j = 1; j < arr.lenghth; j++) {
+    if (arr[i] !== arr[j]) {
+      i++;
+      arr[i] = arr[j]
+    }
+  }
+  return i + 1;
+}
