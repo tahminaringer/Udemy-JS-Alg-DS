@@ -102,3 +102,6 @@
   - Can you improve the performance of your solution?
   - Can you think of other ways to refactor?
   - How have other people solved this problem?
+- **Patterns**
+  - Frequency counters - This pattern uses objects or sets to collect values frequencies of value
+
