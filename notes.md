@@ -104,4 +104,5 @@
   - How have other people solved this problem?
 - **Patterns**
   - Frequency counters - This pattern uses objects or sets to collect values frequencies of value
-
+  - Multiple Pointers - Creating pointers or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition. 
+    - Very efficient way to solve problems with minamal space complexity
