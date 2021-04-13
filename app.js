@@ -86,3 +86,62 @@ function isAlphaNumeric(char) {
 }
 
 charCodeAt(0);
+
+// Write a function called same which accepts two arrays. The function should return true if every value in the array has its corresponding value squared in the second array. the frequency of values must be the same.
+
+//same ([1, 2, 3], [4, 1, 9]) true
+//same ([1, 2, 3], [1, 9]) false
+//same ([1, 2, 1], [4, 4, 1) false
+
+function same(array1, array2) {
+  // if arrays are not the same length return false
+  if(array1.lenghth !== array2.lenghth){
+    return false;
+  }
+  for(let i = 0; i < array1.lenghth; i++) {
+    //Checks to see if array1[i] squared is in array2
+    let correctIndex = array2.indexOf(array1[i] ** 2);
+    // if it is not in array2 it will return false
+    if(correctIndex === -1) {
+      return false;
+    }
+    // if array1^2 is in array two then remove it from array and continue to next index
+    array2.splice(correctIndex, 1);
+  }
+  //finally if all are found/match return true;
+  return true;
+}
+
+// refactored
+
+function same(arr1, arr2) {
+  if(arr1.length !== arr2.length) {
+    return false;
+  }
+  //use objects to count the individual values in array
+  let frequencyCounter1 = {};
+  let frequencyCounter2 = {};
+  //loop over array add one to frequency counter if there or add one if does not exist
+  for(let val of arr1) {
+    frequencyCounter1[val] = (frequencyCounter1[val] || 0) +1;
+  }
+  for(let val of arr) {
+    frequencyCounter2[val] = (frequencyCounter2[val] || 0) +1;
+  }
+  // loop over counter1 to see if exists in counter2
+  for(let key in frequencyCounter1) {
+    //if not return false
+    if(!(key ** 2 in frequencyCounter2)) {
+      return false;
+    }
+    
+    if(frequencyCounter2[key ** 2] !== frequencyCounter1[key]) {
+      return false;
+    }
+  }
+  //if all exist return true
+  return true;
+}
+
+
+
