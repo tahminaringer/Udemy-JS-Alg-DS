@@ -104,5 +104,8 @@
   - How have other people solved this problem?
 - **Patterns**
   - Frequency counters - This pattern uses objects or sets to collect values frequencies of value
-  - Multiple Pointers - Creating pointers or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition. 
+  - Multiple Pointers - Creating pointers or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition.
     - Very efficient way to solve problems with minamal space complexity
+- **Sliding Window** This pattern involes creating a window which can either be an array or number from one position to another
+- **Divide and Conquer** This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data. Can decrease complexity.
+
