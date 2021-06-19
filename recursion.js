@@ -138,3 +138,41 @@ function fib(num) {
   if (num <= 2) return 1;
   return fib(num-1) + fib(num-2);
 }
+
+// Write a recursive function called reverse which accepts a string and returns a new string in reverse
+
+function reverse(s) {
+  if(s.length <= 1) return s;
+  return reverse(s.slice(1) + s[0]);
+};
+
+// isPalindrome - Write a recursive function called isPalindrome which returns true if the string passed to it is a palindrome which returns true if the string passed to it is a palindrome(reads the same forward and backward). Otherwise returns false
+
+function isPalindrome(str) {
+  if (str.length <= 1) return true;
+  if(str.length === 2) return str[0] === str[1];
+  if(str[0] === str.slice(-1)) return isPalindrome(str.slice(1, -1)) 
+  return false;
+}
+
+// write a recursive function called someRecursive which accepts an array and a callback. The function returns true if a single value in the array returns true when passed to the callback. Otherwise it returns false.
+
+function someRecursive(arr, callback) {
+  if (arr.length === 0) return false;
+  if(callback(arr[0])) return true;
+  return someRecursive(arr.slice(1), callback);
+}
+
+// Write a recusive function called flatter which accepts an array of arrays and returns a new array with all values flattened.
+
+function flatten(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if(Array.isArray(arr[i])) {
+      newArr = newArr.concat(flatten(arr[i]))
+    } else {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
