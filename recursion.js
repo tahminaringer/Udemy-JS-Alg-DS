@@ -176,3 +176,25 @@ function flatten(arr) {
   }
   return newArr;
 }
+
+// Write a recursive function called capitalizeFirst. Given an array of strings, capitalize the first letterof each string in the array.
+
+function capitalizeFirst(arr) {
+  if(arr.length ===1) {
+    return [arr[0].toUpperCase()];
+  }
+  let result = capitalizeWords(arr.slice(0, -1));
+  result.push(arr.slice(arr.lenght -1)[0].toUpperCase());
+  return result;
+}
+
+
+function capitalizeWords(arr) {
+  if (arr.length === 1) {
+    return [arr[0][0].toUpperCase() + arr[0].substr(1)];
+  }
+  const result = capitalizeFirst(arr.slice(0, -1));
+  const string = arr.slice(arr.length -1)[0][0].toUpperCase() + arr.slice(arr.lenght -1)[0].substr(1);
+  result.push(string);
+  return result;
+}
